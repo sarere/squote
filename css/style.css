@@ -34,7 +34,6 @@ nav div{
 	padding-top: 10px;
 	padding-bottom: 10px;
 	margin: auto;
-	font-size: 15px;
 	color:black;
 	font-size: 30px;
 	
@@ -232,7 +231,7 @@ footer {
 }
 
 .quote-owner {
-	font-size: 0.7em;
+	font-size: 0.7vw;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -338,7 +337,7 @@ header h2 {
 .right-side button {
 	text-align: left;
 	font-family: 'Times New Roman', Times, serif;
-	font-size: 1em;
+	font-size: 1vw;
 	border: none;
 	color: black;
 	text-decoration: none;
@@ -354,6 +353,7 @@ header h2 {
 }
 
 .right-side a {
+	font-size: 1vw;
 	color: black;
 	text-decoration: none;
 	background-color: #cab068;
@@ -401,7 +401,7 @@ header h2 {
 
 .submit {
 	background-color: #cab068;
-	font-size: 1em;
+	font-size: 1vw;
 	font-family: 'Times New Roman', Times, serif;
 	border: none;
 	color:black;

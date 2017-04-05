@@ -125,9 +125,6 @@ if (isset($_POST['submit'])) {
 				</form>
 				<div class="field">
 					<button name="submit" value="submit" form="formtambah" class="button col-12 submit">Submit</button>
-				</div>
-
-				<div class="field">
 					<a href="index.php" class="button col-12 submit">Cancel</a>
 				</div>
 			</div>

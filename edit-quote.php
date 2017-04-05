@@ -160,6 +160,7 @@ $data = mysqli_fetch_assoc($result);
 				</form>
 				<div class="field">
 					<button name="submit" value="submit" form="formtambah" class="button col-12 submit">Submit</button>
+					<a href="index.php" class="button col-12 submit">Cancel</a>
 				</div>
 			</div>
 			<footer>

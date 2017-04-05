@@ -49,20 +49,26 @@ if (isset($_POST['submit'])) {
 						<label>Font Size</label>
 						<select name="font-size">
 							<option value="-1">-Pilih-</option>
-							<option value="large"> large </option>
-							<option value="normal"> normal</option>
-							<option value="tiny"> tiny </option>
+							<?php
+                                $query = 'SELECT * FROM `font_size`';
+                                $result = mysqli_query($link, $query);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo '<option value="' . $row['id'] . '">' . $row['size'] . '</option>';
+                                }
+							?>
 						</select>
 					</div>
 					<div class="field">
 						<label>Font Color</label>
 						<select name="font-color">
 							<option value="-1">-Pilih-</option>
-							<option value="red"> red </option>
-							<option value="green"> green </option>
-							<option value="yellow"> yellow </option>
-							<option value="black"> black </option>
-							<option value="white"> white </option>
+							<?php
+                                $query = 'SELECT * FROM `font_color`';
+                                $result = mysqli_query($link, $query);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo '<option value="' . $row['id'] . '">' . $row['id'] . '</option>';
+                                }
+							?>
 						</select>
 					</div>
 					<div class="field">
@@ -73,23 +79,26 @@ if (isset($_POST['submit'])) {
 						<label>Text Highlight Color</label>
 						<select name="highlight-color">
 							<option value="-1">-Pilih-</option>
-							<option value="bg-red"> red </option>
-							<option value="bg-green"> green </option>
-							<option value="bg-yellow"> yellow</option>
-							<option value="bg-black"> black </option>
-							<option value="bg-white"> white </option>
+							<?php
+                                $query = 'SELECT * FROM `text_highlight_color`';
+                                $result = mysqli_query($link, $query);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo '<option value="' . $row['id'] . '">' . $row['highlight_color'] . '</option>';
+                                }
+							?>
 						</select>
 					</div>
 					<div class="field">
 						<label>Quote Posisiton</label>
 						<select name="quote-posisition">
 							<option value="-1">-Pilih-</option>
-							<option value="top-left"> top-left </option>
-							<option value="top-right2"> top-right </option>
-							<option value="top3"> top </option>
-							<option value="bot-left"> bottom-left </option>
-							<option value="bot-right"> bottom-right </option>
-							<option value="bottom"> bottom </option>
+							<?php
+                                $query = 'SELECT * FROM `quote_posisition`';
+                                $result = mysqli_query($link, $query);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo '<option value="' . $row['id'] . '">' . $row['posisition'] . '</option>';
+                                }
+							?>
 						</select>
 					</div>
 					<div class="field">

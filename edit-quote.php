@@ -62,30 +62,34 @@ $data = mysqli_fetch_assoc($result);
 						<label>Font Size</label>
 						<select name="font-size">
 							<option value="-1">-Pilih-</option>
-							<?php if($data['font_size'] === 'large') { ?>
-							<option value="large" <?php echo 'selected="selected"'?>> large</option>
-							<?php } elseif ($data['font_size'] === 'normal') { ?>
-							<option value="normal" <?php echo 'selected="selected"'?>> normal</option>
-							<?php } else { ?>
-							<option value="tiny" <?php echo 'selected="selected"'?>> tiny </option>
-							<?php } ?>
+							<?php
+                                $query = 'SELECT * FROM `font_size`';
+                                $result = mysqli_query($link, $query);
+                                while ($row = mysqli_fetch_assoc($result)) {
+									if($row['id'] == $data['font_size']) {
+                                    	echo '<option value="' . $row['id'] . '" selected="selected">' . $row['size'] . '</option>';
+									} else {
+										echo '<option value="' . $row['id'] . '">' . $row['size'] . '</option>';
+									}
+                                }
+							?>
 						</select>
 					</div>
 					<div class="field">
 						<label>Font Color</label>
 						<select name="font-color">
 							<option value="-1">-Pilih-</option>
-							<?php if($data['font_color'] === 'red') { ?>
-							<option value="red" <?php echo 'selected="selected"'?>> red </option>
-							<?php } elseif ($data['font_color'] === 'green') { ?>
-							<option value="green" <?php echo 'selected="selected"'?>> green </option>
-							<?php } elseif ($data['font_color'] === 'yellow') { ?>
-							<option value="yellow" <?php echo 'selected="selected"'?>> yellow </option>
-							<?php } elseif ($data['font_color'] === 'black') { ?>
-							<option value="black" <?php echo 'selected="selected"'?>> black </option>
-							<?php } else { ?>
-							<option value="white" <?php echo 'selected="selected"'?>> white </option>
-							<?php } ?>
+							<?php
+                                $query = 'SELECT * FROM `font_color`';
+                                $result = mysqli_query($link, $query);
+                                while ($row = mysqli_fetch_assoc($result)) {
+									if($row['id'] == $data['font_color']) {
+                                    	echo '<option value="' . $row['id'] . '" selected="selected">' . $row['id'] . '</option>';
+									} else {
+										echo '<option value="' . $row['id'] . '">' . $row['id'] . '</option>';
+									}
+                                }
+							?>
 						</select>
 					</div>
 					<div class="field">
@@ -96,36 +100,34 @@ $data = mysqli_fetch_assoc($result);
 						<label>Text Highlight Color</label>
 						<select name="highlight-color">
 							<option value="-1">-Pilih-</option>
-							<?php if($data['text_highlight_color'] === 'bg-red') { ?>
-							<option value="bg-red" <?php echo 'selected="selected"'?>> red </option>
-							<?php } elseif ($data['text_highlight_color'] === 'bg-green') { ?>
-							<option value="bg-green" <?php echo 'selected="selected"'?>> green </option>
-							<?php } elseif ($data['text_highlight_color'] === 'bg-yellow') { ?>
-							<option value="bg-yellow" <?php echo 'selected="selected"'?>> yellow</option>
-							<?php } elseif ($data['text_highlight_color'] === 'bg-black') { ?>
-							<option value="bg-black" <?php echo 'selected="selected"'?>> black </option>
-							<?php } else { ?>
-							<option value="bg-white" <?php echo 'selected="selected"'?>> white </option>
-							<?php } ?>
+							<?php
+                                $query = 'SELECT * FROM `text_highlight_color`';
+                                $result = mysqli_query($link, $query);
+                                while ($row = mysqli_fetch_assoc($result)) {
+									if($row['id'] == $data['text_highlight_color']) {
+                                    	echo '<option value="' . $row['id'] . '" selected="selected">' . $row['highlight_color'] . '</option>';
+									} else {
+										echo '<option value="' . $row['id'] . '">' . $row['highlight_color'] . '</option>';
+									}
+                                }
+							?>
 						</select>
 					</div>
 					<div class="field">
 						<label>Quote Posisiton</label>
 						<select name="quote-posisition">
 							<option value="-1">-Pilih-</option>
-							<?php if($data['text_highlight_color'] === 'top-left') { ?>
-							<option value="top-left" <?php echo 'selected="selected"'?>> top-left </option>
-							<?php } elseif($data['text_highlight_color'] === 'top-right') { ?>
-							<option value="top-right2" <?php echo 'selected="selected"'?>> top-right </option>
-							<?php } elseif($data['text_highlight_color'] === 'top') { ?>
-							<option value="top" <?php echo 'selected="selected"'?>> top </option>
-							<?php } elseif($data['text_highlight_color'] === 'bot-left') { ?>
-							<option value="bot-left" <?php echo 'selected="selected"'?>> bottom-left </option>
-							<?php } elseif($data['text_highlight_color'] === 'bot-right') { ?>
-							<option value="bot-right" <?php echo 'selected="selected"'?>> bottom-right </option>
-							<?php } else { ?>
-							<option value="bottom" <?php echo 'selected="selected"'?>> bottom </option>
-							<?php } ?>
+							<?php
+                                $query = 'SELECT * FROM `quote_posisition`';
+                                $result = mysqli_query($link, $query);
+                                while ($row = mysqli_fetch_assoc($result)) {
+									if($row['id'] == $data['quote_posisition']) {
+                                    	echo '<option value="' . $row['id'] . '" selected="selected">' . $row['posisition'] . '</option>';
+									} else {
+										echo '<option value="' . $row['id'] . '">' . $row['posisition'] . '</option>';
+									}
+                                }
+							?>
 						</select>
 					</div>
 					<div class="field">

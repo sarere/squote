@@ -67,7 +67,7 @@ if (isset($_GET['quote-type'])) {
 					
 					<div class="col-10 filter">
 						<input id="search" type="text" placeholder="search by quote owner" name="search" class="col-12" value="<?php echo $criteria;?>"/>
-						<a href="add-quote.php">Add Qoute</a>
+						<a href="add-quote.php">Add Quote</a>
 						<h4>Quote Type</h4>
 						<form action="index.php" method="GET">
 							<input type="text" name="quote-type" value="1" >

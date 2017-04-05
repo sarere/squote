@@ -149,7 +149,7 @@ footer {
 }
 
 .tiny {
-	font-size: 1.563em;
+	font-size: 1.563vw;
 }
 
 /*background color*/
@@ -306,7 +306,7 @@ header h2 {
 .field select {
 	width: 100%;
 	border-radius: 5px;
-	padding: 100px;
+	padding: 10px;
 }
 
 .field textarea {
@@ -401,6 +401,8 @@ header h2 {
 
 .submit {
 	background-color: #cab068;
+	font-size: 1em;
+	font-family: 'Times New Roman', Times, serif;
 	border: none;
 	color:black;
 }

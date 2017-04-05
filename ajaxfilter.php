@@ -5,7 +5,7 @@
 	$result = mysqli_query($link, $query);
 	if($request != null){
 		echo '<div class="header">';
-		echo '<h1>'.$request.'</h1>';
+		echo '<h1> by : '.$request.'</h1>';
 		echo '<hr>';
 		echo '</div>';
 	}
@@ -26,7 +26,7 @@
 		echo '		<div class="outer">';
 		echo '			<div class="inner">echo ';
 		echo '				<a href="edit-quote.php?id='.$data['id'].'" class="button col-10 bg-green">Edit</a>';
-		echo '				<a onclick="return confirm("are you sure to delete ?")" href="delete.php?id='.$data['id'].'" class="button col-10 bg-red">Delete</a>';
+		echo '				<a onclick="return confirm(`are you sure to delete ?`)" href="delete.php?id='.$data['id'].'" class="button col-10 bg-red">Delete</a>';
 		echo '			</div>';
 		echo '		</div>';
 		echo '	</div>';
